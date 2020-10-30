@@ -1,4 +1,5 @@
 {
+  "name": "docker-umi-test",
   "private": true,
   "scripts": {
     "start": "umi dev",
