@@ -21,6 +21,7 @@ jobs:
       - run: bash <(curl -s https://codecov.io/bash)
       - run: |
          echo "$PASSWORDS" | docker login --username $USERNAME --password-stdin
+         docker run -d --name db company/proprietary-db:1.2.3
       - run: docker build -t dockerumirun/dockerumirun:latest .
       - run: docker push dockerumirun/dockerumirun:latest
 workflows:
