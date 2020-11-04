@@ -22,8 +22,8 @@ jobs:
       - run: |
          echo "$PASSWORDS" | docker login --username $USERNAME --password-stdin
          docker run -d --name db company/proprietary-db:1.2.3
-      - run: docker build -t dockerumirun/dockerumirun:latest .
-      - run: docker push dockerumirun/dockerumirun:latest
+      - run: sudo docker build -t dockerumirun/dockerumirun:latest .
+      - run: sudo docker push dockerumirun/dockerumirun:latest
 workflows:
   version: 2
   build-test:
